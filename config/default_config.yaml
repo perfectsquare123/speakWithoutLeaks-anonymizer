@@ -1,5 +1,5 @@
 detection:
-  # Options: "spacy", "stanza", "transformer"
+  # Options: "spacy", "stanza", "transformers"
   ner_model: spacy
   # Custom regex for specific entity types
   regex_patterns:
@@ -12,12 +12,12 @@ detection:
 sanitization:
   # Options: tokenize, pseudonymize, redact, generalize, fpe, aes, dp
   entity_strategies:
-    PERSON: dp
-    ORG: pseudonymize
-    GPE: tokenize
-    LOC: tokenize
-    DATE: pseudonymize
-    TIME: redact
+    PERSON:
+    ORG:
+    GPE:
+    LOC:
+    DATE:
+    TIME:
     NORP:
     FAC:
     PRODUCT:
@@ -29,10 +29,10 @@ sanitization:
     QUANTITY:
     ORDINAL:
     CARDINAL:
-    MONEY: generalize
-    EMAIL: fpe
-    PHONE: fpe
-    CREDIT_CARD: redact
+    MONEY:
+    EMAIL:
+    PHONE:
+    CREDIT_CARD:
 
   technique_params:
     encrypt:
@@ -40,10 +40,10 @@ sanitization:
       key: "b1d706d709f60500bf9ec3e5883567f8"
       alphabet: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()-_+=|\\[]{}\"':;/?.>,<"
       # Options: FPE, AES
-      method: FPE
+      method: AES
     dp:
       text_perturb:
-        enable: true
+        enable: false
         epsilon: 1.0
         protected_entity_types: ["PERSON"]
       label_perturb:
@@ -51,6 +51,6 @@ sanitization:
         epsilon: 0.5
 
 processing:
-  batch_size: 1000
+  batch_size: 500
   output_format: csv
   deanonymization_store: true

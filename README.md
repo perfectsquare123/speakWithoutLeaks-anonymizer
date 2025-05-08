@@ -30,6 +30,17 @@ PYTHONPATH=. python cli/run_pipeline.py \
 ```
 
 ```bash
+PYTHONPATH=. python cli/run_pipeline.py \
+  --input data/AG_news_partial.csv \
+  --output output/AG_news_label_large.csv \
+  --text-column text \
+  --label-column label \
+  --num-classes 4 \
+  --batch \
+  --config config/default_config.yaml
+```
+
+```bash
 PYTHONPATH=. python cli/reverse_text_cli.py \
   --input output/sanitized_model_response.txt \
   --output output/reversed_model_response.txt \

@@ -1,0 +1,6 @@
+text,label,sanitized_text,sanitized_pct,perturbed_label
+John Doe's email is john.doe@example.com and he lives in New York.,1,Patrick Thompson email is UqACt^NA!#en[2Qkuyy. and he lives in [GPE_001].,96.97,3
+"Alice paid with credit card 4111-1111-1111-1111 on January 1, 2023.",0,"Denise Haas paid with credit card <REMOVED> on October 24,2023.",100.0,0
+Michael called 123-456-7890 to book a flight to Berlin.,2,Casey Stark called 123-456-7890 to book a flight to [GPE_002].,96.36,1
+Contact jane.smith87@gmail.com or +1-234-567-8910 for more information.,3,Contact &)xFuQy01ZvRNx>0RJQDDL or +1-234-567-8910 for more information.,30.99,1
+Ben paid 23 dollar using his credit card 4111-1111-1111-1111 on 5pm buying 3 packets of apples in New York.,2,Anna Lopez paid 1000 dollar using his credit card <REMOVED> on <REMOVED> buying 3 packets of apples in [GPE_001].,99.07,1
